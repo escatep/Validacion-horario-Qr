@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SAES - Consulta de Horario</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:#8a8a8a;
+  color:#444;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:12px;
+}
+.browserbar{
+  height:54px;background:#17181d;color:#eee;display:flex;align-items:center;
+  padding:0 18px;gap:16px;font-size:24px;
+}
+.browserbar .addr{
+  flex:1;background:#292a30;border-radius:24px;height:38px;display:flex;
+  align-items:center;padding:0 15px;font-size:12px;color:#ddd;overflow:hidden;
+}
+.page{
+  width:min(100%,900px);margin:0 auto;background:#eee;min-height:100vh;
+  padding:38px 30px 95px;
+}
+.header{
+  height:58px;background:#fff;border-bottom:4px solid #222;
+  display:flex;align-items:center;padding:0 8px;
+}
+.logo{
+  width:62px;height:48px;display:flex;align-items:center;justify-content:center;
+  color:#702044;font-weight:900;font-size:18px;border-right:1px solid #ddd;
+}
+.school{flex:1;text-align:center;color:#702044;font-size:9px;line-height:1.25}
+.school b{font-size:10px}
+.header-icons{width:62px;text-align:center;color:#702044;font-size:18px}
+.panel{
+  background:#fff;border:1px solid #d9d9d9;padding:12px 14px;margin-top:25px;
+}
+.panel-title{
+  margin:-12px -14px 9px;background:#777;color:#fff;font-weight:bold;
+  padding:6px 9px;font-size:11px;
+}
+.info p{margin:8px 0;font-size:11px}
+.info b{color:#173f8f}
+.table-wrap{margin-top:17px;overflow:hidden}
+table{width:100%;border-collapse:collapse;table-layout:fixed;background:#fff;font-size:9px}
+th{
+  background:#666;color:#fff;border:1px solid #ddd;padding:6px 3px;
+  text-align:left;font-weight:bold
+}
+td{
+  border:1px solid #d0d0d0;padding:6px 4px;vertical-align:top;
+  height:73px;line-height:1.25
+}
+th:nth-child(1){width:7%}
+th:nth-child(2){width:22%}
+th:nth-child(3){width:8%}
+th:nth-child(4){width:17%}
+.group{color:#777}
+.subject{font-weight:600}
+.prof{font-size:8.5px}
+.slot{font-size:8.5px}
+.footer{font-size:9px;color:#777;margin-top:12px}
+@media(max-width:700px){
+  body{font-size:10px}
+  .browserbar{height:54px;padding:0 12px;gap:10px}
+  .page{padding:55px 23px 80px}
+  .header{height:58px}
+  .school{font-size:7px}.school b{font-size:8px}
+  .logo{width:45px;font-size:14px}.header-icons{width:42px;font-size:14px}
+  .panel{margin-top:23px}
+  .info p{font-size:9px;margin:8px 0}
+  table{font-size:8px}
+  th{padding:5px 2px}
+  td{padding:5px 3px;height:70px}
+  .prof,.slot{font-size:7.5px}
+}
+</style>
+</head>
+<body>
+<div class="browserbar">
+  <span>‹</span><span>›</span><span>⌂</span>
+  <div class="addr">saes.escatep.ipn.mx/valqr/ValidaHorario.aspx</div>
+  <span>⋮</span>
+</div>
+
+<div class="page">
+  <div class="header">
+    <div class="logo">IPN</div>
+    <div class="school">
+      ESCUELA SUPERIOR DE COMERCIO Y ADMINISTRACIÓN<br>
+      <b>UNIDAD TEPEPAN</b>
+    </div>
+    <div class="header-icons">◈<br><small>@</small></div>
+  </div>
+
+  <section class="panel info">
+    <div class="panel-title">Respuesta</div>
+    <p>Periodo escolar: <b>20271</b></p>
+    <p>Boleta: <b>2025430859</b></p>
+    <p>Nombre del estudiante: <b>LOPEZ LOPEZ JORGE ALAN</b></p>
+    <p>Programa académico: <b>Contador Público</b></p>
+  </section>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Grupo</th><th>Materia</th><th>Créditos</th><th>Profesores</th>
+        <th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="group">4CV2</td>
+        <td class="subject">C422 - ESTUDIO DE CAPITAL CONTABLE</td><td>7,00</td>
+        <td class="prof">TORRES CAMPOS AGUSTIN</td>
+        <td class="slot">14:00 - 16:00<br>Edif: A<br>Salón: 202</td><td></td>
+        <td class="slot">14:00 - 16:00<br>Edif: A<br>Salón: 202</td><td></td>
+        <td class="slot">15:00 - 16:00<br>Edif: A<br>Salón: 202</td>
+      </tr>
+      <tr>
+        <td class="group">4CV2</td>
+        <td class="subject">C423 - CONTABILIDAD DE COSTOS PREDETERMINADOS</td><td>7,00</td>
+        <td class="prof">GRANDE CAMPOS BEYDA</td>
+        <td class="slot">16:00 - 18:00<br>Edif: A<br>Salón: 202</td><td></td>
+        <td class="slot">16:00 - 18:00<br>Edif: A<br>Salón: 202</td><td></td>
+        <td class="slot">16:00 - 18:00<br>Edif: A<br>Salón: 202</td>
+      </tr>
+      <tr>
+        <td class="group">4CV2</td>
+        <td class="subject">C424 - TRIBUTACIÓN DE PERSONAS MORALES</td><td>8,00</td>
+        <td class="prof">RODRIGUEZ ISLAS ELENA ARACELI</td>
+        <td class="slot">18:00 - 20:00<br>Edif: A<br>Salón: 201</td><td></td>
+        <td class="slot">18:00 - 20:00<br>Edif: A<br>Salón: 201</td><td></td>
+        <td class="slot">14:00 - 15:00<br>Edif: A<br>Salón: 201</td>
+      </tr>
+      <tr>
+        <td class="group">4CV2</td>
+        <td class="subject">C425 - FUNDAMENTOS DE AUDITORÍA</td><td>6,00</td>
+        <td class="prof">VARGAS ZAVALA EDITH</td>
+        <td></td>
+        <td class="slot">18:00 - 20:00<br>Edif: A<br>Salón: 201</td><td></td>
+        <td class="slot">20:00 - 22:00<br>Edif: A<br>Salón: 201</td>
+        <td class="slot">18:00 - 20:00<br>Edif: A<br>Salón: 201</td>
+      </tr>
+      <tr>
+        <td class="group">4CV2</td>
+        <td class="subject">C426 - ADMINISTRACIÓN FINANCIERA DEL CAPITAL DE TRABAJO</td><td>6,00</td>
+        <td class="prof">CAMACHO CARRANZA ADOLFO</td>
+        <td></td>
+        <td class="slot">16:00 - 18:00<br>Edif: A<br>Salón: 202</td><td></td>
+        <td class="slot">16:00 - 18:00<br>Edif: A<br>Salón: 202</td><td></td>
+      </tr>
+      <tr>
+        <td class="group">4CV2</td>
+        <td class="subject">C427 - DERECHO TRIBUTARIO Y MEDIOS DE DEFENSA FISCAL</td><td>6,00</td>
+        <td class="prof">OSORIO CETINA DAVID</td>
+        <td></td>
+        <td class="slot">20:00 - 22:00<br>Edif: A<br>Salón: 202</td><td></td>
+        <td class="slot">20:00 - 22:00<br>Edif: A<br>Salón: 202</td><td></td>
+      </tr>
+      <tr>
+        <td class="group">4CV2</td>
+        <td class="subject">C428 - INVESTIGACIÓN DE OPERACIONES</td><td>7,00</td>
+        <td class="prof">BRISEÑO MACIEL MICHELLE</td>
+        <td class="slot">20:00 - 22:00<br>Edif: A<br>Salón: 201</td><td></td>
+        <td class="slot">20:00 - 22:00<br>Edif: A<br>Salón: 201</td><td></td><td></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="footer">Consulta de horario · Diseño visual inspirado en la interfaz mostrada.</div>
+</div>
+</body>
+</html>
